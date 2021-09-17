@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+      integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
+      crossorigin="anonymous"
+    />
+    <title>Ball Breakout</title>
+
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Poppins', sans-serif;
+      }
+      .stats {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 3em;
+      }
+      .btn {
+        background-color: #134e8a;
+        color: white;
+        padding: 0.5em 1em;
+        border: none;
+        border-radius: 1em;
+        display: none;
+      }
+      #canvas {
+        background-color: #123456;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="stats">
+        <h3>Level:<span id="gamelevel"></span></h3>
+        <h4>Life Remaining: <span id="liferemaining"></span></h4>
+        <input
+          class="btn"
+          type="button"
+          value="Next Level"
+          onclick="nextlevel();"
+        />
+      </div>
+      <canvas id="canvas"></canvas>
+      <div>
+        <h3 id="gameover"></h3>
+      </div>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
